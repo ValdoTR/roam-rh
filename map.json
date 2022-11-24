@@ -296,32 +296,10 @@
          "objects":[
                 {
                  "class":"area",
-                 "height":128,
-                 "id":14,
-                 "name":"silentZone",
-                 "properties":[
-                        {
-                         "name":"silent",
-                         "type":"bool",
-                         "value":true
-                        }],
-                 "rotation":0,
-                 "visible":true,
-                 "width":224,
-                 "x":640,
-                 "y":544
-                }, 
-                {
-                 "class":"area",
-                 "height":224,
+                 "height":145.711283284353,
                  "id":16,
                  "name":"jitsiMeetingRoom",
                  "properties":[
-                        {
-                         "name":"focusable",
-                         "type":"bool",
-                         "value":true
-                        }, 
                         {
                          "name":"jitsiRoom",
                          "type":"string",
@@ -331,17 +309,12 @@
                          "name":"jitsiTrigger",
                          "type":"string",
                          "value":"onaction"
-                        }, 
-                        {
-                         "name":"zoom_margin",
-                         "type":"float",
-                         "value":1
                         }],
                  "rotation":0,
                  "visible":true,
-                 "width":192,
-                 "x":768,
-                 "y":224
+                 "width":236.497640039184,
+                 "x":563.680826431561,
+                 "y":353.664262178288
                 }],
          "opacity":1,
          "type":"objectgroup",
