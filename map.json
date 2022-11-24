@@ -416,7 +416,7 @@
         {
          "name":"mapDescription",
          "type":"string",
-         "value":"A perfect virtual office to get started with WorkAdventure!"
+         "value":"Forum de recrutement du m\u00e9tavers de la ROAM"
         }, 
         {
          "name":"mapImage",
@@ -424,14 +424,9 @@
          "value":"map.png"
         }, 
         {
-         "name":"mapLink",
-         "type":"string",
-         "value":"https:\/\/thecodingmachine.github.io\/workadventure-map-starter-kit\/map.json"
-        }, 
-        {
          "name":"mapName",
          "type":"string",
-         "value":"Office"
+         "value":"Forum de recrutement"
         }, 
         {
          "name":"script",
