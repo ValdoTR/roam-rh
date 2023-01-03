@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléporteur</title>
+    <style>
+        /* Center form vertically and horizontally */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        /* Set element sizes */
+        select {
+            height: 2em;
+            font-size: 1.2em;
+        }
+        button {
+            height: 2em;
+            font-size: 1.2em;
+        }
+        
+        /* Flat design style */
+        body {
+            background-color: #fafafa;
+            color: #333;
+            font-family: sans-serif;
+        }
+        select, button {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 0;
+            box-shadow: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            cursor: pointer;
+        }
+        select:focus, button:focus {
+            border-color: #B31B34;
+            outline: none;
+        }
+
+        #confirmButton {
+            background-color: #B31B34;
+            color: white;
+        }
+    </style>      
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://play.workadventu.re/iframe_api.js"></script>
+    <script>
+        /// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
+        console.log('Jobs UI Website started successfully')
+
+        $(document).ready(function(){
+            const companiesList = [
+                "Relyens", // 0
+                "L'étoile", // 1
+                "SMA", // 2
+                "Assurance Outremer", // 3
+                "MAF", // 4
+                "Saint-Christophe", // 5
+                "MAPA", // 6
+                "Cmma", // 7
+                "Solucia", // 8
+                "CAMCA", // 9
+                "Liberty", // 10
+            ]
+
+            // Data object with jobs and companies
+            var data = {
+                "jobs": [
+                    {
+                        "name": "Tous les postes",
+                        "companies": [...companiesList]
+                    },
+                    {
+                        "name": "Juriste Généraliste – F/H",
+                        "companies": [companiesList[0], companiesList[1], companiesList[2]]
+                    },
+                    {
+                        "name": "Assistant Administratif – F/H",
+                        "companies": [companiesList[2], companiesList[3], companiesList[4]]
+                    },
+                    {
+                        "name": "Comptable Fournisseurs – F/H",
+                        "companies": [companiesList[5], companiesList[6]]
+                    },
+                    {
+                        "name": "Business Developer – F/H",
+                        "companies": [companiesList[7], companiesList[8], companiesList[9], companiesList[10]]
+                    }
+                ]
+            };
+
+            // Populate job select element
+            var jobSelect = $("#jobSelect");
+            for (var i = 0; i < data.jobs.length; i++) {
+                jobSelect.append("<option value='" + i + "'>" + data.jobs[i].name + "</option>");
+            }
+
+            // Populate company select element with all companies
+            var companySelect = $("#companySelect");
+            for (var i = 0; i < companiesList.length; i++) {
+                companySelect.append("<option value='" + i + "'>" + companiesList[i] + "</option>");
+            }
+
+            // Filter company select element based on job selection
+            jobSelect.change(function() {
+                companySelect.empty();
+                const selectedJobIndex = $(this).val();
+                if (selectedJobIndex === "all") {
+                    for (var i = 0; i < companiesList.length; i++) {
+                        companySelect.append("<option value='" + i + "'>" + companiesList[i] + "</option>");
+                    }
+
+                    return
+                }
+                const selectedJob = data.jobs[selectedJobIndex];
+                selectedJob.companies.forEach(function(company) {
+                    companySelect.append("<option>" + company + "</option>");
+                });
+            });
+
+            $("#confirmButton").click(function() {
+                var selectedCompany = $("#companySelect").val();
+                // By default the value will be the companiesList index, and after selecting a job it will be the name of the job.
+                // So if the selected company has letters we will find it's index, oterwise we just use the index
+                const anchor = selectedCompany.match(/[a-z]/i) ? companiesList.indexOf(selectedCompany) : selectedCompany;
+                console.log("#" + anchor)
+                WA.nav.goToRoom("#" + anchor)
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2>Se téléporter vers un des stands !</h2>
+
+            <p>Liste des postes</p>
+            <select id="jobSelect"></select>
+        
+            <p>Liste des entreprises qui proposent ce poste.</p>
+            <select id="companySelect"></select>
+        
+            <button id="confirmButton" type="button">Confirmer</button>
+        </form>
+      </div>
+</body>
+</html>
