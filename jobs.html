@@ -58,17 +58,16 @@
 
         $(document).ready(function(){
             const companiesList = [
-                "Relyens", // 0
-                "L'étoile", // 1
+                "Relyens", // 1
                 "SMA", // 2
                 "Assurance Outremer", // 3
                 "MAF", // 4
                 "Saint-Christophe", // 5
-                "MAPA", // 6
+                "L'étoile", // 6
                 "Cmma", // 7
                 "Solucia", // 8
                 "CAMCA", // 9
-                "Liberty", // 10
+                "Liberty Mutual", // 10
             ]
 
             // Data object with jobs and companies
@@ -131,8 +130,8 @@
                 // By default the value will be the companiesList index, and after selecting a job it will be the name of the job.
                 // So if the selected company has letters we will find it's index, oterwise we just use the index
                 const anchor = selectedCompany.match(/[a-z]/i) ? companiesList.indexOf(selectedCompany) : selectedCompany;
-                console.log("#" + anchor)
-                WA.nav.goToRoom("#" + anchor)
+                const standNumber = parseInt(anchor) + 1
+                WA.nav.goToRoom("#" + standNumber)
             });
         });
     </script>
