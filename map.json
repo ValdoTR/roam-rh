@@ -3292,7 +3292,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"mailto:fanny.dupas@roam.asso.fr?subject=[Forum WA] CV"
+                         "value":"mailto:secretariat@roam.asso.fr?subject=[Forum WA] CV"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3309,6 +3309,87 @@
                  "width":90.6666666666665,
                  "x":2816,
                  "y":1755
+                }, 
+                {
+                 "class":"area",
+                 "height":55.5,
+                 "id":21,
+                 "name":"rdv1",
+                 "properties":[
+                        {
+                         "name":"openTab",
+                         "type":"string",
+                         "value":"https:\/\/calendly.com\/metassur2023\/roam?month=2023-02&date=2023-02-01"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"Appuyez sur ESPACE pour prendre RDV"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":73.9167,
+                 "x":768,
+                 "y":981
+                }, 
+                {
+                 "class":"area",
+                 "height":54.8333333333333,
+                 "id":22,
+                 "name":"prez1",
+                 "properties":[
+                        {
+                         "name":"openWebsite",
+                         "type":"string",
+                         "value":"Relyens.pdf"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"Appuyez sur ESPACE pour plus d'informations"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":69.5833666666666,
+                 "x":423,
+                 "y":1188.33333333333
+                }, 
+                {
+                 "class":"area",
+                 "height":49.8333333333333,
+                 "id":23,
+                 "name":"drive1",
+                 "properties":[
+                        {
+                         "name":"openTab",
+                         "type":"string",
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                        }, 
+                        {
+                         "name":"openWebsiteTrigger",
+                         "type":"string",
+                         "value":"onaction"
+                        }, 
+                        {
+                         "name":"openWebsiteTriggerMessage",
+                         "type":"string",
+                         "value":"Appuyez sur ESPACE pour consulter les fiches de poste"
+                        }],
+                 "rotation":0,
+                 "visible":true,
+                 "width":65.2500333333334,
+                 "x":351.374983333333,
+                 "y":1239.58333333333
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -3539,7 +3620,7 @@
          "y":0
         }],
  "nextlayerid":81,
- "nextobjectid":21,
+ "nextobjectid":24,
  "orientation":"orthogonal",
  "properties":[
         {
