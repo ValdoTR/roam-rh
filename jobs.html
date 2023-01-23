@@ -58,8 +58,9 @@
 
         $(document).ready(function(){
             const companiesList = [
-                "Relyens", // 1
-                "SMA", // 2
+                "Relyens", // 0
+                "SMA", // 1
+                "Mutuelle de Poitiers", // 2
                 "Assurance Outremer", // 3
                 "MAF", // 4
                 "Saint-Christophe", // 5
@@ -79,7 +80,7 @@
                     },
                     {
                         "name": "Chef de projet informatique",
-                        "companies": [companiesList[2]]
+                        "companies": [companiesList[1]]
                     },
                     {
                         "name": "Responsable d'agence assurance",
@@ -177,9 +178,8 @@
                 var selectedCompany = $("#companySelect").val();
                 // By default the value will be the companiesList index, and after selecting a job it will be the name of the job.
                 // So if the selected company has letters we will find it's index, oterwise we just use the index
-                const anchor = selectedCompany.match(/[a-z]/i) ? companiesList.indexOf(selectedCompany) : selectedCompany;
-                const standNumber = parseInt(anchor) + 1
-                WA.nav.goToRoom("#" + standNumber)
+                const anchor = selectedCompany.match(/[a-z]/i) ? companiesList.indexOf(selectedCompany) : selectedCompany
+                WA.nav.goToRoom("#" + anchor)
             });
         });
     </script>
@@ -187,7 +187,7 @@
 <body>
     <div class="container">
         <form>
-            <h2>Se téléporter vers un des stands !</h2>
+            <h2>Touvez le stand fait pour vous !</h2>
 
             <p>Liste des postes</p>
             <select id="jobSelect"></select>
@@ -195,7 +195,7 @@
             <p>Liste des entreprises qui proposent ce poste.</p>
             <select id="companySelect"></select>
         
-            <button id="confirmButton" type="button">Confirmer</button>
+            <button id="confirmButton" type="button">Se téléporter</button>
         </form>
       </div>
 </body>
