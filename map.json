@@ -3647,7 +3647,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"mailto:secretariat@roam.asso.fr?subject=[Forum WA] CV"
+                         "value":"mailto:secretariat@roam.asso.fr?subject=[Forum WA] CV Relyens"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
