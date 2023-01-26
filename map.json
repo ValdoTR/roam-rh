@@ -3701,7 +3701,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"RELYENS.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3836,7 +3836,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":""
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3944,7 +3944,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"MUTUELLE_DE_POITIERS_ASSURANCES.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4052,7 +4052,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"ASSURANCE_MUTUELLE_DOUTREMER.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4160,7 +4160,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"MAF.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4268,7 +4268,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"MUTUELLE_SAINT-CHRISTOPHE.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4322,7 +4322,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"LETOILE.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4403,7 +4403,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"CMMA.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4511,7 +4511,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"SOLUCIA.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4619,7 +4619,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"CAMCA.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4727,7 +4727,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":"Relyens.pdf"
+                         "value":"LIBERTY_SPECIALTY_MARKETS.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
