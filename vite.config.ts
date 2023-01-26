@@ -8,6 +8,7 @@ export default defineConfig({
             input: {
                 index: "./index.html",
                 jobs: "./jobs.html",
+                available: "./available.html",
                 ...getMapsScripts(),
             },
         },
