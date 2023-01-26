@@ -32,7 +32,6 @@ WA.onInit().then(() => {
         applyAvailability(true)
     }
 
-
     function makeUnavailable() {
         applyAvailability(false)
     }
@@ -76,8 +75,6 @@ WA.onInit().then(() => {
             }
         })
     }).catch(e => console.error(e));
-
 }).catch(e => console.error(e));
-
 
 export {};
