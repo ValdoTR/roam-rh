@@ -3712,6 +3712,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -3728,7 +3733,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1_TX05HxonTwXec3x48NdyR85Qvm7t6d2#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3847,6 +3852,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -3863,7 +3873,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1U4ScQD86taaTGWe9SemGKMe8ZW5MYw1A#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3955,6 +3965,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -3971,7 +3986,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1kWOm_Mszc8bx6fesFFsD3HZFHP_BoZto#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4063,6 +4078,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4079,7 +4099,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1a6t8U9fAVm_-k743vOVu4Fb6JQ9uiMDw#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4171,6 +4191,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4187,7 +4212,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1IX1jp5orqW0vOWDemtY5J8eiUd3Phvmg#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4279,6 +4304,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4295,7 +4325,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1fYvGdCgJkHGk1LvYEJtq5uCKo9VKXqGf#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4333,6 +4363,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4414,6 +4449,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4430,7 +4470,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1LUlm1SbxPbvPNJWG0qGIOKLmpGISTktA#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4522,6 +4562,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4538,7 +4583,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1qwYM2UxOamoUViVwR31aJvOCp5Z3dBSR#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4630,6 +4675,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4646,7 +4696,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=1zQgTlpH56sQb3bt2S98D6P4D3BFZZmiT#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4738,6 +4788,11 @@
                          "name":"openWebsiteTriggerMessage",
                          "type":"string",
                          "value":"Appuyez sur ESPACE pour consulter la pr\u00e9sentation de notre entreprise"
+                        }, 
+                        {
+                         "name":"openWebsiteWidth",
+                         "type":"int",
+                         "value":70
                         }],
                  "rotation":0,
                  "visible":true,
@@ -4754,7 +4809,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=11Zrn-nXPudLnXmbxrvNiXg26LSeSd6Cz#list"
+                         "value":"https:\/\/drive.google.com\/embeddedfolderview?id=18O6eED6yJkF_qelAbF3ZVuBdov9n48JR#list"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
