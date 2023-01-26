@@ -45,6 +45,11 @@
             outline: none;
         }
 
+        #errorMessage {
+            color: red;
+            font-size: 1.2em;
+        }
+
         #confirmButton {
             background-color: #B31B34;
             color: white;
@@ -56,132 +61,543 @@
         /// <reference path="../node_modules/@workadventure/iframe-api-typings/iframe_api.d.ts" />
         console.log('Jobs UI Website started successfully')
 
-        $(document).ready(function(){
-            const companiesList = [
-                "Relyens", // 0
-                "SMA", // 1
-                "Mutuelle de Poitiers", // 2
-                "Assurance Outremer", // 3
-                "MAF", // 4
-                "Saint-Christophe", // 5
-                "L'étoile", // 6
-                "Cmma", // 7
-                "Solucia", // 8
-                "CAMCA", // 9
-                "Liberty Mutual", // 10
+        $(document).ready(() => {
+            const citiesArray = [
+                "Alfortville (94)", // 0
+                "Antony (92)", // 1
+                "Bordeaux (33)", // 2
+                "Brest (35)", // 3
+                "Châlons-en-Champagne (51)", // 4
+                "Fort de France (Martinique)", // 5
+                "La Chapelle Saint-Mesmin (45)", // 6
+                "La Chapelle-Saint-Luc (10)", // 7
+                "La Garenne-Colombes (92)", // 8
+                "Lyon (69)", // 9
+                "Massy (91)", // 10
+                "Niort (79)", // 11
+                "Olivet (45)", // 12
+                "Orléans (45)", // 13
+                "Paris (75)", // 14
+                "Poitiers (86)", // 15
+                "Reims (51)", // 16
+                "Rennes (35)", // 17
+                "Rochefort (17)", // 18
+                "Rouen (76)", // 19
+                "Toulouse (31)", // 20
             ]
 
-            // Data object with jobs and companies
+            const jobsArray = [
+                "Actuaire", // 0
+                "Administrateur(trice) SI referent(e)", // 1
+                "Agent(e) comptable recouvrement", // 2
+                "Analyste SI", // 3
+                "Architecte .net", // 4
+                "Assistant administratif", // 5
+                "Assistant marketing", // 6
+                "Assistant(e) commercial(e)", // 7
+                "Business Developer", // 8
+                "Business Developer assurances", // 9
+                "Chargé d'affaires internes DSI", // 10
+                "Chargé de comptes entreprises collectivités IARD", // 11
+                "Chargé de relation client", // 12
+                "Chargé de systèmes applicatifs", // 13
+                "Chef de projet informatique", // 14
+                "Chef(fe) de projet SI", // 15
+                "Commercial(e) en assurance IARD Artisans", // 16
+                "Conseiller(ère) de clientèle assurance", // 17
+                "Développeur JAVA", // 18
+                "Développeur front end confirmé", // 19
+                "Directeur de marché établissements publics de santé", // 20
+                "Développeur .net fullstack", // 21
+                "Expert BI", // 22
+                "Gestionnaire assurance", // 23
+                "Gestionnaire assurance alternance", // 23
+                "Gestionnaire de contrats d’assurance", // 24
+                "Gestionnaire middle market", // 25
+                "Gestionnaire sinistres IARD", // 26
+                "Gestionnaire technique immobilier", // 27
+                "Juriste", // 28
+                "Juriste Droit des Assurances", // 29
+                "Juriste Hauts Risques Financiers", // 30
+                "Juriste Responsabilité Civile et Décennale", // 31
+                "Juriste en assurance indemnisation", // 32
+                "Juriste généraliste", // 33
+                "Manager équipe indemnisation RCM", // 34
+                "Responsable d'agence assurance", // 35
+                "Responsable pôle administratif", // 36
+                "Régleur de sinistre", // 37
+                "Rédacteur prévoyance et santé collectives", // 38
+                "Rédacteur réclamations contentieux recouvrement", // 39
+                "Souscripteur Responsabilité Civile Médicale", // 40
+                "Souscripteur confirmé IARD", // 41
+                "Souscripteur en assurance construction", // 42
+                "Souscripteur rc professionnelle et construction", // 43
+            ]
+
+            const companiesArray = [
+                "RELYENS", // 0
+                "SMA BTP", // 1
+                "MUTUELLE DE POITIERS ASSURANCES", // 2
+                "ASSURANCE MUTUELLE D'OUTRE-MER", // 3
+                "MAF", // 4
+                "MUTUELLE SAINT-CHRISTOPHE", // 5
+                "L'ETOILE ASSURANCE", // 6
+                "CMMA", // 7
+                "SOLUCIA", // 8
+                "CAMCA", // 9
+                "LIBERTY SPECIALTY MARKETS", // 10
+            ]
+
+            // Data object with cities, jobs and companies
             var data = {
-                "jobs": [
+                "cities": [
                     {
-                        "name": "Tous les postes",
-                        "companies": [...companiesList]
+                        "name": citiesArray[0],
+                        "jobs": [
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Chef de projet informatique",
-                        "companies": [companiesList[1]]
+                        "name": citiesArray[1],
+                        "jobs": [
+                            {
+                                "name": jobsArray[2],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[24],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Responsable d'agence assurance",
-                        "companies": [companiesList[6]]
+                        "name": citiesArray[2],
+                        "jobs": [
+                            {
+                                "name": jobsArray[24],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Conseiller(ère) de clientèle assurance",
-                        "companies": [companiesList[6]]
+                        "name": citiesArray[3],
+                        "jobs": [
+                            {
+                                "name": jobsArray[7],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Gestionnaire sinistres IARD",
-                        "companies": [companiesList[6]]
+                        "name": citiesArray[4],
+                        "jobs": [
+                            {
+                                "name": jobsArray[26],
+                                "companies": [companiesArray[9]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Actuaire F/H",
-                        "companies": [companiesList[4]]
+                        "name": citiesArray[5],
+                        "jobs": [
+                            {
+                                "name": jobsArray[14],
+                                "companies": [companiesArray[3]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Règleur de sinistres F/H",
-                        "companies": [companiesList[4]]
+                        "name": citiesArray[6],
+                        "jobs": [
+                            {
+                                "name": jobsArray[3],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[15],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Juriste F/H",
-                        "companies": [companiesList[4]]
+                        "name": citiesArray[7],
+                        "jobs": [
+                            {
+                                "name": jobsArray[35],
+                                "companies": [companiesArray[7]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Chargé de comptes entreprises collectivités IARD",
-                        "companies": [companiesList[4]]
+                        "name": citiesArray[8],
+                        "jobs": [
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Souscripteur confirmé IARD",
-                        "companies": [companiesList[0]]
+                        "name": citiesArray[9],
+                        "jobs": [
+                            {
+                                "name": jobsArray[24],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[42],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[41],
+                                "companies": [companiesArray[0]]
+                            },
+                            {
+                                "name": jobsArray[40],
+                                "companies": [companiesArray[0]]
+                            },
+                            {
+                                "name": jobsArray[34],
+                                "companies": [companiesArray[0]]
+                            },
+                            {
+                                "name": jobsArray[29],
+                                "companies": [companiesArray[0]]
+                            },
+                            {
+                                "name": jobsArray[20],
+                                "companies": [companiesArray[0]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Souscripteur Responsabilité Civile Médicale",
-                        "companies": [companiesList[0]]
+                        "name": citiesArray[10],
+                        "jobs": [
+                            {
+                                "name": jobsArray[24],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Manager équipe sinistres corporels",
-                        "companies": [companiesList[0]]
+                        "name": citiesArray[11],
+                        "jobs": [
+                            {
+                                "name": jobsArray[24],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Rédacteur prévoyance",
-                        "companies": [companiesList[0]]
+                        "name": citiesArray[12],
+                        "jobs": [
+                            {
+                                "name": jobsArray[38],
+                                "companies": [companiesArray[0]]
+                            },
+                            {
+                                "name": jobsArray[9],
+                                "companies": [companiesArray[0]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Juriste Généraliste - F/H",
-                        "companies": [companiesList[7]]
+                        "name": citiesArray[13],
+                        "jobs": [
+                            {
+                                "name": jobsArray[1],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Assistant Administratif - F/H",
-                        "companies": [companiesList[7]]
+                        "name": citiesArray[14],
+                        "jobs": [
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[42],
+                                "companies": [companiesArray[1]]
+                            },
+                            {
+                                "name": jobsArray[23],
+                                "companies": [companiesArray[9]]
+                            },
+                            {
+                                "name": jobsArray[6],
+                                "companies": [companiesArray[9]]
+                            },
+                            {
+                                "name": jobsArray[12],
+                                "companies": [companiesArray[9]]
+                            },
+                            {
+                                "name": jobsArray[13],
+                                "companies": [companiesArray[9]]
+                            },
+                            {
+                                "name": jobsArray[23],
+                                "companies": [companiesArray[9]]
+                            },
+                            {
+                                "name": jobsArray[10],
+                                "companies": [companiesArray[9]]
+                            },
+                            {
+                                "name": jobsArray[25],
+                                "companies": [companiesArray[10]]
+                            },
+                            {
+                                "name": jobsArray[30],
+                                "companies": [companiesArray[4]]
+                            },
+                            {
+                                "name": jobsArray[21],
+                                "companies": [companiesArray[4]]
+                            },
+                            {
+                                "name": jobsArray[4],
+                                "companies": [companiesArray[4]]
+                            },
+                            {
+                                "name": jobsArray[36],
+                                "companies": [companiesArray[4]]
+                            },
+                            {
+                                "name": jobsArray[22],
+                                "companies": [companiesArray[4]]
+                            },
+                            {
+                                "name": jobsArray[31],
+                                "companies": [companiesArray[4]]
+                            },
+                            {
+                                "name": jobsArray[0],
+                                "companies": [companiesArray[5]]
+                            },
+                            {
+                                "name": jobsArray[37],
+                                "companies": [companiesArray[5]]
+                            },
+                            {
+                                "name": jobsArray[28],
+                                "companies": [companiesArray[5]]
+                            },
+                            {
+                                "name": jobsArray[11],
+                                "companies": [companiesArray[5]]
+                            },
+                            {
+                                "name": jobsArray[33],
+                                "companies": [companiesArray[8]]
+                            },
+                            {
+                                "name": jobsArray[5],
+                                "companies": [companiesArray[8]]
+                            },
+                            {
+                                "name": jobsArray[8],
+                                "companies": [companiesArray[8]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Comptable Fournisseurs - F/H",
-                        "companies": [companiesList[7]]
+                        "name": citiesArray[15],
+                        "jobs": [
+                            {
+                                "name": jobsArray[19],
+                                "companies": [companiesArray[2]]
+                            },
+                            {
+                                "name": jobsArray[18],
+                                "companies": [companiesArray[2]]
+                            },
+                            {
+                                "name": jobsArray[27],
+                                "companies": [companiesArray[2]]
+                            },
+                            {
+                                "name": jobsArray[39],
+                                "companies": [companiesArray[2]]
+                            },
+                            {
+                                "name": jobsArray[43],
+                                "companies": [companiesArray[2]]
+                            },
+                        ],
                     },
                     {
-                        "name": "Business Developer - F/H",
-                        "companies": [companiesList[7]]
+                        "name": citiesArray[16],
+                        "jobs": [
+                            {
+                                "name": jobsArray[17],
+                                "companies": [companiesArray[7]]
+                            },
+                        ],
                     },
-                ]
-            };
+                    {
+                        "name": citiesArray[17],
+                        "jobs": [
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
+                    },
+                    {
+                        "name": citiesArray[18],
+                        "jobs": [
+                            {
+                                "name": jobsArray[16],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
+                    },
+                    {
+                        "name": citiesArray[19],
+                        "jobs": [
+                            {
+                                "name": jobsArray[24],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
+                    },
+                    {
+                        "name": citiesArray[20],
+                        "jobs": [
+                            {
+                                "name": jobsArray[32],
+                                "companies": [companiesArray[1]]
+                            },
+                        ],
+                    },
+                ],
+            }
 
-            // Populate job select element
+            // Populate city selector
+            var citySelect = $("#citySelect");
+            citySelect.append("<option>Toutes les villes</option>")
+            citiesArray.forEach((city) => {
+                citySelect.append("<option>" + city + "</option>")
+            })
+
+            // Populate job selector
             var jobSelect = $("#jobSelect");
-            for (var i = 0; i < data.jobs.length; i++) {
-                jobSelect.append("<option value='" + i + "'>" + data.jobs[i].name + "</option>");
-            }
+            var jobSelectLabel = $("#jobSelectLabel");
+            jobSelect.append("<option>Tous les postes</option>")
+            jobsArray.forEach((job) => {
+                jobSelect.append("<option>" + job + "</option>")
+            })
 
-            // Populate company select element with all companies
-            var companySelect = $("#companySelect");
-            for (var i = 0; i < companiesList.length; i++) {
-                companySelect.append("<option value='" + i + "'>" + companiesList[i] + "</option>");
-            }
+            // Populate company selector
+            var companySelect = $("#companySelect")
+            var companySelectLabel = $("#companySelectLabel")
+            companySelect.append("<option>Choisissez une entreprise</option>")
+            companiesArray.forEach((company) => {
+                companySelect.append("<option>" + company + "</option>")
+            })
 
-            // Filter company select element based on job selection
-            jobSelect.change(function() {
-                companySelect.empty();
-                const selectedJobIndex = $(this).val();
-                if (selectedJobIndex === "all") {
-                    for (var i = 0; i < companiesList.length; i++) {
-                        companySelect.append("<option value='" + i + "'>" + companiesList[i] + "</option>");
-                    }
+            var selectedCityJobs = []
+            var selectedJobCompanies = []
 
-                    return
+            // Filter job selector based on city selection
+            citySelect.change(function() {
+                var selectedCity = $(this).val()
+                if (selectedCity === "Toutes les villes") {
+                    selectedCityJobs = data.cities.map(city => city.jobs).flat()
+                } else {
+                    const selectedCityObj = data.cities.find(city => city.name === selectedCity)
+                    selectedCityJobs = selectedCityObj && selectedCityObj.jobs ? selectedCityObj.jobs : undefined
                 }
-                const selectedJob = data.jobs[selectedJobIndex];
-                selectedJob.companies.forEach(function(company) {
-                    companySelect.append("<option>" + company + "</option>");
-                });
-            });
+
+                if(selectedCityJobs) {
+                    $("#errorMessage").hide()
+                    jobSelect.empty()
+                    jobSelect.append("<option>Tous les postes</option>")
+                    selectedCityJobs.forEach((job) => {
+                        jobSelect.append("<option>" + job.name + "</option>")
+                    })
+                    jobSelect.change()
+                    jobSelectLabel.show()
+                    jobSelect.show()
+                    companySelectLabel.show()
+                    companySelect.show()
+                } else {
+                    $("#errorMessage").text("Il n'exise pas de postes pour la ville sélectionnée.")
+                    $("#errorMessage").show()
+                    jobSelect.hide()
+                    jobSelectLabel.hide()
+                    companySelect.hide()
+                    companySelectLabel.hide()
+                }
+            })
+
+            // Filter company selector based on job selection
+            jobSelect.change(function() {
+                var selectedJob = $(this).val()
+                if (selectedJob === "Tous les postes") {
+                    let allSelectedCompanies = selectedCityJobs.map(job => job.companies).flat()
+                    selectedJobCompanies = [...new Set(allSelectedCompanies)]
+                } else {
+                    const selectedJobObj = selectedCityJobs.find(job => job.name === selectedJob)
+                    selectedJobCompanies = selectedJobObj && selectedJobObj.companies ? selectedJobObj.companies : undefined
+                }
+
+                if(selectedJobCompanies) {
+                    $("#errorMessage").hide()
+                    companySelect.empty()
+                    selectedJobCompanies.forEach((company) => {
+                        companySelect.append("<option>" + company + "</option>")
+                    })
+                    companySelect.change()
+                    companySelectLabel.show()
+                    companySelect.show()
+                } else {
+                    $("#errorMessage").text("Il n'exise pas d'entreprises pour le poste sélectionné.")
+                    $("#errorMessage").show()
+                    companySelect.hide()
+                    companySelectLabel.hide()
+                }
+            })
+
+            companySelect.change(function() {
+                var selectedCompany = $(this).val()
+                if (companiesArray.includes(selectedCompany)) {
+                    $("#confirmButton").show()
+                } else {
+                    $("#confirmButton").hide()
+                }
+            })
 
             $("#confirmButton").click(function() {
-                var selectedCompany = $("#companySelect").val();
-                // By default the value will be the companiesList index, and after selecting a job it will be the name of the job.
-                // So if the selected company has letters we will find it's index, oterwise we just use the index
-                const anchor = selectedCompany.match(/[a-z]/i) ? companiesList.indexOf(selectedCompany) : selectedCompany
-                WA.nav.goToRoom("#" + anchor)
-            });
-        });
+                var selectedCompany = $("#companySelect").val()
+                if (companiesArray.includes(selectedCompany)) {
+                    const anchor = companiesArray.indexOf(selectedCompany)
+                    WA.nav.goToRoom("#" + anchor)
+                } else {
+                    $("#errorMessage").text("Une erreur est survenue.")
+                    $("#errorMessage").show()
+                }
+              
+            })
+        })
     </script>
 </head>
 <body>
@@ -189,13 +605,18 @@
         <form>
             <h2>Touvez le stand fait pour vous !</h2>
 
-            <p>Liste des postes</p>
-            <select id="jobSelect"></select>
+            <p id="errorMessage" style="display: none;"></p>
+
+            <p>Pour quelle ville cherchez-vous un poste ?</p>
+            <select id="citySelect"></select>
+
+            <p id="jobSelectLabel" style="display: none;">Quel poste cherchez-vous ?</p>
+            <select id="jobSelect" style="display: none;"></select>
         
-            <p>Liste des entreprises qui proposent ce poste.</p>
+            <p id="companySelectLabel">Quelle entreprise vous correspond ?</p>
             <select id="companySelect"></select>
         
-            <button id="confirmButton" type="button">Se téléporter</button>
+            <button id="confirmButton" type="button" style="display: none;">Se téléporter</button>
         </form>
       </div>
 </body>
