@@ -3674,7 +3674,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":""
+                         "value":"https:\/\/calendly.com\/manon-beulle\/relyens-entretien-de-15-min?month=2023-02&date=2023-02-01"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -3841,7 +3841,7 @@
                         {
                          "name":"openWebsite",
                          "type":"string",
-                         "value":""
+                         "value":"SMA_BTP.pdf"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
@@ -4524,7 +4524,7 @@
                         {
                          "name":"openTab",
                          "type":"string",
-                         "value":""
+                         "value":"https:\/\/calendly.com\/laurene-semedo\/solucia-service-et-protection-juridiques-entretien-15-minutes?month=2023-02&date=2023-02-01"
                         }, 
                         {
                          "name":"openWebsiteTrigger",
